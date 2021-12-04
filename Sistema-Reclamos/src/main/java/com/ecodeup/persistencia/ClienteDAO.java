@@ -16,7 +16,7 @@ import com.ecodeup.conexion.Conexion;
 import com.ecodeup.negocio.Cliente;
 
 public class ClienteDAO {
-	private static final String senderEmail = "**"; //correo origen
+	private static final String senderEmail = "****"; //correo origen
 	private static final String senderPassword = "****"; 
 	
 	private Connection connection;
