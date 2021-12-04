@@ -5,28 +5,39 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Electro Hogar | Detalle de Reclamo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Electro Hogar  | Detalle del Reclamo</title>
+        <style>@import"css/estilos.css";</style>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://use.fontawesome.com/d0255d9c7d.js"></script>
+        <link rel="shortcut icon" href="images/electro_hogar_icono.ico" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <style>
+       	label{margin:7px;}
+       </style>
 </head>
 <body>
+<jsp:include page="Header.jsp"/>
+<div class='contenedor'>
 <x:set var="reclamo" value="${reclamo}"> </x:set>
 <x:set var="usuario" value="${usuario}"> </x:set>
 
 <h1>Detalle de Reclamo</h1>
 
-<label ><b>N° de Reclamo: ${reclamo.idReclamo}<b></label><br>
-<label ><b>Fecha de Reclamo: ${reclamo.created_at}<b></label><br>
+<label ><b>N° de Reclamo: ${reclamo.idReclamo}</b></label><br>
+<label ><b>Fecha de Reclamo: ${reclamo.created_at}</b></label><br>
 
 <label >Tipo: ${reclamo.tipo}</label><br>
 <label >Sub Tipo: ${reclamo.subtipo}</label><br>
 <label >Estado: <x:choose>
 	<x:when test="${reclamo.estado=='0'}">
-        PENDIENTE
+        <label style='color:#E78A28;font-weight:bold;'>PENDIENTE</label>
     </x:when>
     <x:when test="${reclamo.estado=='1'}">
-        ATENDIDO
+        <label style='color:#96EA36;font-weight:bold;'>ATENDIDO</label>
     </x:when>    
     <x:otherwise>
-        RECHAZADO
+        <label style='color:#E72E28;font-weight:bold;'>RECHAZADO</label>
     </x:otherwise>
     </x:choose></label><br>
     
@@ -89,11 +100,14 @@
 	    	<label >Descripción: </label><br>
 	    	${reclamo.atencion_detalle}
 	    </fieldset>
+	    <br>
+                <div style="text-align:right;font-size:12px;">
+                    <a href="reclamo?opcion=seguimientoreclamo">Volver a la Lista</a>
+                </div>
 	    
-	    <a href="reclamo?opcion=seguimientoreclamo">Volver a la Lista</a>
     </x:otherwise>
     </x:choose>
-    
+   </div> 
    <br>
    
     

@@ -8,16 +8,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Electro Hogar  | Login</title>
         <style>@import"../css/estilos.css";</style>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <script src="https://use.fontawesome.com/d0255d9c7d.js"></script>
+        
         <link rel="shortcut icon" href="../images/electro_hogar_icono.ico" type="image/x-icon">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="logincontainer">
-
-
-
-<form method='post' action='cliente' class="login">
+	<form method='post' action='../cliente' class="login">
 			<div>
                 <center>
                     <img src="../images/electro_hogar_logo.jpg" style="max-height:100px;" >
@@ -29,6 +25,7 @@
                 
                 <br>
                 <div >
+                <input type="hidden" name="opcion" value="ingresar"/>
                 <div style="text-align:left;">Ingresa Usuario</div><br>
                 <input type="text" name="usuario" id="usuario" class="input"/><br>
                 <label id="lbluser" style="color:red;font-size:11px;"></label>    
@@ -47,7 +44,7 @@
                 
                 <button type='button' class="btn_success" onclick="validar()" >Iniciar Sesión</button>
                 <!--<button type='button'><a href="Portada.jsp" style='text-decoration: none;color:white;'>Ingresar</a></button>-->
-                <input value="ingresar" id="ingresar" styleClass="boton_nuevo" style='display:none;' />
+                <input type="submit" value="ingresar" id="ingresar" class="boton_nuevo" style='display:none;' />
             </div>
             
 </form>

@@ -5,24 +5,56 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Electro Hogar  | Bienvenido</title>
+        <style>@import"css/estilos.css";</style>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://use.fontawesome.com/d0255d9c7d.js"></script>
+        <link rel="shortcut icon" href="images/electro_hogar_icono.ico" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-<h1>PORTADA</h1>
-<x:set var="cliente" value="${cliente}"> </x:set>
-<h4>Bienvenido ${cliente.nombreCliente} ${cliente.apellidoCliente}</h4>
+        <body style='overflow:hidden;'>
+         <jsp:include page="Header.jsp"/>
+         
+        <div style="background-color: white;text-align:center;width:50%;margin:80px auto;">
+            <h3>Fecha: <label id="lblfecha"></label></h3>
+            <div style="display: flex;justify-content:space-between;">
+                
+                <div style="width:35%">
+                    <h4>Reclamos Generados</h4><br>
+                    <div style="border:2px solid black;padding:15px;display:flex;justify-content: center;align-items: center;">
+                        2
+                    </div>
+                </div>
+                <div style="width:35%">
+                    <h4>Reclamos Atendidos</h4><br>
+                    <div style="border:2px solid black;padding:15px;display:flex;justify-content: center;align-items: center;">
+                        4
+                    </div>
+                </div>
+                <div style="width:20%">
+                    <h4>% Atención</h4><br>
+                    <div style="padding:15px;display:flex;justify-content: center;align-items: center;">
+                        50%
+                    </div>
+                </div>
+            </div>
+        </div>
+        <jsp:include page="Footer.jsp"/>
+    </body>
+    </body>
+    
+<script>
+    window.onload = function() {
+        var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];;
+        var date = new Date();
 
-<x:choose>
-	<x:when test="${cliente.idCliente=='3'}">
-		<a href='reclamo?opcion=todosreclamos'>Atender Reclamos</a>
-		<a href='reclamo?opcion=seguimientoreclamo'>Reporte de Reclamos</a>        
-    </x:when>
-    <x:otherwise>
-        <a href='cliente?opcion=registrarreclamo'>Registrar Reclamo</a>
-<a href='reclamo?opcion=seguimientoreclamo'>Seguimiento Reclamo</a>
-    </x:otherwise>
-    </x:choose>
-
-
-</body>
+        document.getElementById('lblfecha').innerHTML = months[date.getMonth()] + ' ' + date.getFullYear();
+    };
+    
+    $("#m1").addClass("menu_selected");
+    $("#m1 a").css("color", "#1766C1");
+</script>
+    
 </html>

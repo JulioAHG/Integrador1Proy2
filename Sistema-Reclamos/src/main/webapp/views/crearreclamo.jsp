@@ -1,27 +1,42 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="x" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Electro Hogar | Crear Reclamo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Electro Hogar  | Portada</title>
+        <style>@import"css/estilos.css";</style>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://use.fontawesome.com/d0255d9c7d.js"></script>
+        <link rel="shortcut icon" href="images/electro_hogar_icono.ico" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+<jsp:include page="Header.jsp"/>
+<div class='contenedor'>
+<center><h3>Registrar Reclamo</h3></center>
 
-<h1>Crear Reclamo</h1>
 
-<form method="post" action="reclamo">
+<form method="post" action="reclamo" class="formulario_registro" style="width:70%;">
 	<input type="hidden" name="opcion" value="guardar" />
-	<label>Motivo de Contacto:</label>
-	<select name="tipo" onchange="cambiar($(this).val())">
-		<option value='Reclamo'>Reclamo</option>
-		<option value='Queja'>Queja</option>
-	</select>
-	<label>Motivo de Reclamo / Queja:</label>
-	<select name="subtipo" id="subtipo">
-		<option value='Distinto al Precio Publicitario'>Distinto al Precio Publicitario</option>
-		<option value='Producto Fallado'>Producto Fallado</option>
-	</select>
+	<div style="display:flex;justify-content: space-between">
+    	<div class="parts">
+    	<label>Motivo de Contacto</label>
+    	<select name="tipo" onchange="cambiar($(this).val())">
+			<option value='Reclamo'>Reclamo</option>
+			<option value='Queja'>Queja</option>
+		</select>
+    	</div>
+    	<div class="parts">
+			<label>Motivo de Reclamo / Queja</label>
+			<select name="subtipo" id="subtipo">
+				<option value='Distinto al Precio Publicitario'>Distinto al Precio Publicitario</option>
+				<option value='Producto Fallado'>Producto Fallado</option>
+			</select>
+		</div>
+    </div>
 	
 	 <fieldset id="reclamo">
 	  <legend>Detalles del Reclamo</legend>
@@ -48,11 +63,11 @@
 	
 	
 	
-	
+	<br>
 	<label>Descripción del Incidente:</label>
-	<textarea name="descripcion" ></textarea><br>
+	<textarea name="descripcion" style="width:90%;" ></textarea><br>
 	
-	<input type="submit" value="guardar" /><br>
+	<input type="submit" class="boton_nuevo" value="guardar" /><br>
 </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

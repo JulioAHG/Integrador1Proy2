@@ -7,9 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Electro Hogar  | Crear Cuenta</title>
         <style>@import"css/estilos.css";</style>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <script src="https://use.fontawesome.com/d0255d9c7d.js"></script>
-        <link rel="shortcut icon" href="images/electro_hogar_icono.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../images/electro_hogar_icono.ico" type="image/x-icon">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body class="logincontainer" style="overflow-y:scroll;">

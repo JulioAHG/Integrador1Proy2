@@ -5,15 +5,32 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Electro Hogar  | Crear Reclamo</title>
+        <style>@import"css/estilos.css";</style>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="https://use.fontawesome.com/d0255d9c7d.js"></script>
+        <link rel="shortcut icon" href="images/electro_hogar_icono.ico" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
 <x:set var="titulo" value="${msgtitulo}"> </x:set>
 <x:set var="detalle" value="${msgdetalle}"> </x:set>
-<h3>${titulo}</h3>
-<br>
-<h3>${detalle}</h3>
-<br>
-<tr><td><a href="cliente?opcion=inicio">Volver al Inicio</a></td></tr>
+<body class="logincontainer" >
+	<form class="login">
+	<div >
+	<center>
+        <img src="images/electro_hogar_logo.jpg" style="max-height:100px;" >
+        <br><label style='font-size:20px'>${titulo}</label>
+    </center>
+    <br>
+    <div>
+	<p>${detalle}</p>
+	</div><br>
+	
+	<div style="text-align:right;font-size:12px;">
+		<a href='cliente?opcion=seguimientoreclamo' title="Volver a la lista" class="azul" style="text-decoration:none;">Volver a la Lista</a><br><br>
+    </div>
+	</div>
+	</form>
 </body>
 </html>
