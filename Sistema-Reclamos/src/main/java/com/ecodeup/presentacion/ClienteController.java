@@ -54,6 +54,9 @@ public class ClienteController extends HttpServlet {
 		}else if(opcion.equals("inicio")){
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/portada.jsp");
 			requestDispatcher.forward(request, response);
+		}else if(opcion.equals("login")){
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/login.jsp");
+			requestDispatcher.forward(request, response);
 		}
 		
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -81,6 +84,7 @@ public class ClienteController extends HttpServlet {
 		cliente.setUpdated_at(new java.sql.Date(fechaactual.getTime()));
 		
 		if(opcion.equals("guardar")) {
+			System.out.print("Presionaste guardar");
 			try {
 				clidao.guardar(cliente);
 				request.setAttribute("msgtitulo", "Cuenta Creada");
